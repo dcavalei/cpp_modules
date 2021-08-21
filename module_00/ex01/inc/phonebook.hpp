@@ -8,19 +8,19 @@
 
 using std::string;
 
-class phonebook {
+class Phonebook {
 
 	private:
 
 
 	public:
 
-		phonebook(void);
-		~phonebook(void);
+		Phonebook(void);
+		~Phonebook(void);
 
 };
 
-class contact {
+class Contact {
 
 	private:
 
@@ -33,7 +33,7 @@ class contact {
 	public:
 
 		// Constructors
-		contact(void);
+		Contact(void);
 
 		// Setters
 		int	set_firstName(string firstName);

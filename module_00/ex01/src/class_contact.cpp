@@ -1,6 +1,6 @@
 #include <phonebook.hpp>
 
-contact::contact(void) :
+Contact::Contact(void) :
 
 	firstName(""),
 	lastName(""),
@@ -9,9 +9,9 @@ contact::contact(void) :
 	phoneNumber(0) {
 }
 
-// Sets contact::firstName if the string contains only letters or spaces.
+// Sets Contact::firstName if the string contains only letters or spaces.
 // return 0 if successful, 1 if not.
-int	contact::set_firstName(string firstName) {
+int	Contact::set_firstName(string firstName) {
 
 	// check for letters or spaces only
 	for (size_t i = 0; i < firstName.length(); i++) {
@@ -21,9 +21,9 @@ int	contact::set_firstName(string firstName) {
 	return (0);
 }
 
-// Sets contact::lastName if the string contains only letters or spaces.
+// Sets Contact::lastName if the string contains only letters or spaces.
 // return 0 if successful, 1 if not.
-int	contact::set_lastName(string lastName) {
+int	Contact::set_lastName(string lastName) {
 
 	// check for letters or spaces only
 	for (size_t i = 0; i < lastName.length(); i++) {
@@ -33,9 +33,9 @@ int	contact::set_lastName(string lastName) {
 	return (0);
 }
 
-// Sets contact::nickName if the string contains only letters, numbers or spaces.
+// Sets Contact::nickName if the string contains only letters, numbers or spaces.
 // return 0 if successful, 1 if not.
-int	contact::set_nickName(string nickName) {
+int	Contact::set_nickName(string nickName) {
 
 	// check for letters, numbers or spaces only
 	for (size_t i = 0; i < nickName.length(); i++) {
@@ -45,9 +45,9 @@ int	contact::set_nickName(string nickName) {
 	return (0);
 }
 
-// Sets contact::darkestScret if the string contains only printable characters.
+// Sets Contact::darkestScret if the string contains only printable characters.
 // return 0 if successful, 1 if not.
-int	contact::set_darkestSecret(string darkestSecret) {
+int	Contact::set_darkestSecret(string darkestSecret) {
 
 	// check for printable characters only
 	for (size_t i = 0; i < darkestSecret.length(); i++) {
@@ -57,9 +57,9 @@ int	contact::set_darkestSecret(string darkestSecret) {
 	return (0);
 }
 
-// Sets contact:phoneNumber if the string contains only numbers, 10 digits max.
+// Sets Contact:phoneNumber if the string contains only numbers, 10 digits max.
 // return 0 if successful, 1 if not.
-int	contact::set_phoneNumber(string phoneNumber) {
+int	Contact::set_phoneNumber(string phoneNumber) {
 
 	// check for digits only
 	for (int i = 0; phoneNumber.length(); i++) {
@@ -76,17 +76,17 @@ int	contact::set_phoneNumber(string phoneNumber) {
 	return (0);
 }
 
-// return contact::firstName.
-string	contact::get_firstName(void) const { return (this->firstName); }
+// return Contact::firstName.
+string	Contact::get_firstName(void) const { return (this->firstName); }
 
-// return contact::lastName.
-string	contact::get_lastName(void) const { return (this->lastName); }
+// return Contact::lastName.
+string	Contact::get_lastName(void) const { return (this->lastName); }
 
-// return contact::nickName.
-string	contact::get_nickName(void) const { return (this->nickName); }
+// return Contact::nickName.
+string	Contact::get_nickName(void) const { return (this->nickName); }
 
-// return contact::darkestSecret.
-string	contact::get_darkestSecret(void) const { return (this->darkestSecret); }
+// return Contact::darkestSecret.
+string	Contact::get_darkestSecret(void) const { return (this->darkestSecret); }
 
-// return contact::phoneNumber.
-ulong	contact::get_phoneNumber(void) const { return (this->phoneNumber); }
+// return Contact::phoneNumber.
+ulong	Contact::get_phoneNumber(void) const { return (this->phoneNumber); }
