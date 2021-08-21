@@ -1,4 +1,4 @@
-SRC		= $(shell find . -name "*.cpp")
+SRC		= $(shell find . -type f -name "*.cpp")
 OBJ		= $(SRC:.cpp=.o)
 CC		= clang++
 CFLAGS	= -Wall -Wextra -Werror -Wno-unused
@@ -6,8 +6,8 @@ NAME	= megaphone
 
 all:		$(NAME)
 
-.c.o:
-				$(CC) $(CFLAGS)	-c $< -o $@
+.cpp.o:
+				$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME):	$(OBJ)
 				$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
@@ -21,4 +21,6 @@ fclean:		clean
 run:		all
 				./$(NAME)
 
-re:			clean fclean all
+re:			fclean all
+
+.PHONY:		clean fclean run re
