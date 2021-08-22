@@ -5,35 +5,29 @@
 # include <iomanip>
 # include <string>
 # include <cctype>
+# include "utils.hpp"
+
+# define MAX_CONTACTS 2
+# define WIDTH 10
+# define HEIGHT 20
 
 using std::string;
-
-class Phonebook {
-
-	private:
-
-
-	public:
-
-		Phonebook(void);
-		~Phonebook(void);
-
-};
 
 class Contact {
 
 	private:
 
-		string	firstName;
-		string	lastName;
-		string	nickName;
-		string	darkestSecret;
-		ulong	phoneNumber;
+		string	_firstName;
+		string	_lastName;
+		string	_nickName;
+		string	_darkestSecret;
+		string	_phoneNumber;
 
 	public:
 
 		// Constructors
 		Contact(void);
+		~Contact(void);
 
 		// Setters
 		int	set_firstName(string firstName);
@@ -47,7 +41,23 @@ class Contact {
 		string	get_lastName(void) const;
 		string	get_nickName(void) const;
 		string	get_darkestSecret(void) const;
-		ulong	get_phoneNumber(void) const;
+		string	get_phoneNumber(void) const;
+
+};
+
+class Phonebook {
+
+	private:
+
+		Contact	_contact[MAX_CONTACTS];
+		int		_index;
+
+	public:
+
+		Phonebook(void);
+		~Phonebook(void);
+		int	add_contact(void);
+		int	display_contacts(void);
 
 };
 

@@ -2,12 +2,17 @@
 
 int main(void)
 {
-	std::string string;
-	// Phonebook name(10);
-	// Phonebook another_name;
 
+	Phonebook	phonebook;
+	string		buffer;
 
-	// std::cout << name.contacts << std::endl;
-	// std::cout << another_name.contacts << std::endl;
+	while (true) {
+
+		std::getline(std::cin, buffer);
+		if (trim(buffer) == "") { continue; }
+		if (buffer == "EXIT") { return (0); }
+		else if (buffer == "ADD" && phonebook.add_contact()) { return (0); }
+		else if (buffer == "SEARCH" && phonebook.display_contacts()) { return (0); }
+	}
 	return (0);
 }
