@@ -4,12 +4,12 @@
 # include <iostream>
 # include <iomanip>
 # include <string>
-# include <cctype>
+# include <cstdlib>
+
 # include "utils.hpp"
 
-# define MAX_CONTACTS 2
+# define MAX_CONTACTS 8
 # define WIDTH 10
-# define HEIGHT 20
 
 using std::string;
 
@@ -57,7 +57,8 @@ class Phonebook {
 		Phonebook(void);
 		~Phonebook(void);
 		int	add_contact(void);
-		int	display_contacts(void);
+		int	display_contacts(void) const;
+		int	display_info(int index) const;
 
 };
 

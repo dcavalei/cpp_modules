@@ -8,12 +8,12 @@ Contact::Contact(void) :
 	_darkestSecret(""),
 	_phoneNumber("") {
 
-	std::cout << "Another Contact instance" <<  std::endl;
+	// std::cout << "Another Contact instance" <<  std::endl;
 }
 
 Contact::~Contact(void) {
 
-	std::cout << "Contact instance Destroyed" <<  std::endl;
+	// std::cout << "Contact instance Destroyed" <<  std::endl;
 }
 
 // Sets Contact::firstName if the string contains only letters or spaces.
@@ -89,9 +89,7 @@ int	Contact::set_phoneNumber(string phoneNumber) {
 	for (size_t i = 0; i < phoneNumber.length(); i++) {
 		if (!isdigit(phoneNumber[i])) { return (1); }
 	}
-	// convert from string to unsigned long
 	_phoneNumber = phoneNumber;
-	std::cout << "'" << _phoneNumber << "'" << std::endl;
 	return (0);
 }
 
