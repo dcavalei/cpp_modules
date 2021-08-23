@@ -3,7 +3,7 @@ INC		= $(shell find inc -type f -name "*.hpp")
 OBJ		= $(SRC:%.cpp=obj/%.o)
 CC		= clang++
 CFLAGS	= -Wall -Wextra -Werror -Wno-unused -std=c++98 -Iinc
-NAME	= Account
+NAME	= Account.out
 
 all:		$(NAME)
 
