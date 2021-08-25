@@ -14,10 +14,12 @@ class HumanB {
 
 		HumanB( std::string name, Weapon *weapon = NULL);
 		~HumanB( void );
-		void				set_name( std::string string );
-		const std::string&	get_name( void ) const;
 
 		void	attack( void ) const;
+		void	set_weapon( Weapon *weapon );
+
+		void				set_name( std::string string );
+		const std::string&	get_name( void ) const;
 };
 
 #endif
