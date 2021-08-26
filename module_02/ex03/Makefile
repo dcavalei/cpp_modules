@@ -1,0 +1,31 @@
+SRC		= $(shell find . -type f -name "*.cpp")
+INC		= $(shell find . -type f -name "*.hpp")
+OBJ		= $(SRC:.cpp=.o)
+CC		= clang++
+CFLAGS	= -Wall -Wextra -Werror -Wno-unused -std=c++98 -Iinc
+NAME	= main.out
+
+all:		$(NAME)
+
+.cpp.o:		$(INC)
+				@$(CC) $(CFLAGS) -Iinc -c $< -o $@ && echo "generating object file '$@'"
+
+$(NAME):	$(OBJ)
+				@$(CC) $(CFLAGS) $(OBJ) -o $(NAME) && echo "generating executable file '$@'"
+
+clean:
+				@rm -vrf $(OBJ)
+
+fclean:		clean
+				@rm -vrf $(NAME)
+				@rm -vrf test.txt
+
+run:		all
+				@./$(NAME)
+
+test:		all
+				@./$(NAME) > test.txt
+
+re:			fclean all
+
+.PHONY:		clean fclean run re test

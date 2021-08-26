@@ -21,6 +21,7 @@ class Fixed
 		~Fixed( void );
 
 		Fixed&	operator=( const Fixed& other);
+
    		Fixed&	operator++( void );
 		Fixed	operator++( int );
    		Fixed&	operator--( void );
