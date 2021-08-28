@@ -19,7 +19,7 @@ DiamondTrap::DiamondTrap( std::string name ) :
 	_hitPoints = tmp_fragTrap.get_hitPoints();
 	_energyPoints = tmp_scavTrap.get_energyPoints();
 	_attackDamage = tmp_fragTrap.get_attackDamage();
-	_energyPoints = ScavTrap::_energyPoints;
+	_energyPoints = tmp_scavTrap.get_energyPoints();
 }
 
 DiamondTrap::~DiamondTrap( void ) {
