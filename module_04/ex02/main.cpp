@@ -96,5 +96,8 @@ int main( void ) {
 
 	std::cout << "--------------------------------" << std::endl;
 }
+	// this is not allowed now since this is a pure virtual function.
+	// Animal* animal = new Animal;
+
 	return (0);
 }
