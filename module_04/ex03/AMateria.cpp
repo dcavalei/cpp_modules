@@ -19,11 +19,16 @@ AMateria::~AMateria( void ) {
 }
 
 AMateria&	AMateria::operator=( const AMateria& rhs ) {
+	std::cout << "AMateria assignment operator called" << std::endl;
 	if (this == &rhs)
 		return (*this);
 
 	_type = rhs.get_type();
 	return (*this);
+}
+
+void		AMateria::use( ICharacter& target ) {
+	std::cout << "Target " << target.getName() << " with " << _type << std::endl;
 }
 
 std::string	AMateria::get_type( void ) const {
