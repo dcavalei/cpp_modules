@@ -22,8 +22,6 @@ ShrubberyCreationForm&	ShrubberyCreationForm::operator=( const ShrubberyCreation
 }
 
 void					ShrubberyCreationForm::execute( const Bureaucrat& executor ) const {
-	(void)executor;
-
 	if (is_signed() == false) {
 		throw Form::FormNotSignedException();
 	}

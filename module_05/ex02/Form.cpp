@@ -71,5 +71,5 @@ const char*			Form::FormNotSignedException::what() const throw() {
 }
 
 const char*			Form::BureaucratGradeTooLowException::what( void ) const throw () {
-	return "Bureacrat grade to low";
+	return "Bureaucrat grade to low";
 }
