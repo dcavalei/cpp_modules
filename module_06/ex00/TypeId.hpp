@@ -3,8 +3,6 @@
 
 #include <iostream>
 #include <sstream>
-#include <climits>
-#include <limits>
 #include <iomanip>
 
 enum type {
