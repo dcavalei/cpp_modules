@@ -18,9 +18,9 @@ enum type {
 
 class TypeId {
 	private:
-
-		type				_type;
-		const std::string	_str;
+		double		_num;
+		type		_type;
+		std::string	_str;
 
 		TypeId();
 
@@ -31,19 +31,21 @@ class TypeId {
 
 		TypeId&		operator=( const TypeId& rhs);
 
-		static bool	is_special( const std::string& str );
 		static bool	is_int( const std::string& str );
 		static bool	is_char( const std::string& str );
 		static bool	is_float( const std::string& str );
 		static bool	is_double( const std::string& str );
+		static bool	is_special( const std::string& str );
 
 		void print_int();
 		void print_char();
 		void print_float();
 		void print_double();
 
-		type				get_type();
-		const std::string&	get_string();
+		type				get_type() const;
+		const std::string&	get_string() const;
+		double				get_num() const;
+
 };
 
 
