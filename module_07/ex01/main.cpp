@@ -13,7 +13,7 @@ int main() {
 	output_array<char>(array, 10);
 	std::cout << "---------------------------" << std::endl;
 
-	iter<char>(array, 10, add_one);
+	iter(array, 10, add_one<char>);
 
 	std::cout << "char array: After" << std::endl;
 	output_array<char>(array, 10);
@@ -26,7 +26,7 @@ int main() {
 	output_array<int>(array, 5);
 	std::cout << "---------------------------" << std::endl;
 
-	iter<int>(array, 5, add_one);
+	iter(array, 5, add_one<int>);
 
 	std::cout << "int array: After" << std::endl;
 	output_array<int>(array, 5);
@@ -40,16 +40,23 @@ int main() {
 	output_array<float>(array, 3);
 	std::cout << "---------------------------" << std::endl;
 
-	iter<float>(array, 3, add_one);
+	iter(array, 3, add_one<float>);
 
 	std::cout << "float array: After" << std::endl;
 	output_array<float>(array, 3);
 }
+{
+	int tab[] = { 0, 1, 2, 3, 4 };
+	Awesome tab2[5];
+
+	iter( tab, 5, print<int> );
+	iter( tab2, 5, print<Awesome> );
+}
 	return 0;
 }
 
-template <typename T>
-void	iter( T* array, std::size_t len, void (*func)(T&) ) {
+template <typename T, typename F>
+void	iter( T* array, std::size_t len, F func ) {
 	for (std::size_t i = 0; i < len; i++) {
 			func(array[i]);
 	}
