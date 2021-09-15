@@ -4,12 +4,6 @@
 #include <algorithm>
 
 template <typename T>
-typename T::iterator	easyFind( const T &container, int n );
-
-
-
-
-
-
+typename T::const_iterator	easyFind( const T &container, int n );
 
 #endif
