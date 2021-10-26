@@ -5,7 +5,6 @@
 int main() {
 
 	MutantStack<int> stack;
-
 	stack.push(5);
 	stack.push(17);
 
@@ -35,3 +34,4 @@ int main() {
 	std::stack<int> s(stack);
 	return 0;
 }
+

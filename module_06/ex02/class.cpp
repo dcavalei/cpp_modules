@@ -17,17 +17,17 @@ Base*	generate() {
 
 void	identify( Base& ref ) {
 	try {
-		A&	tmp = dynamic_cast<A&>(ref);
+		(void)dynamic_cast<A&>(ref);
 		std::cout << "A" << std::endl;
 	}
 	catch (std::exception& e) {
 		try {
-			B&	tmp = dynamic_cast<B&>(ref);
+			(void)dynamic_cast<B&>(ref);
 			std::cout << "B" << std::endl;
 		}
 		catch (std::exception& e) {
 			try {
-				C&	tmp = dynamic_cast<C&>(ref);
+				(void)dynamic_cast<C&>(ref);
 				std::cout << "C" << std::endl;
 			}
 			catch (std::exception& e) {
@@ -38,11 +38,11 @@ void	identify( Base& ref ) {
 }
 
 void	identify( Base* ptr ) {
-	if (A* tmp = dynamic_cast<A*>(ptr)) {
+	if (dynamic_cast<A*>(ptr)) {
 		std::cout << "A" << std::endl;
-	} else if (B* tmp = dynamic_cast<B*>(ptr)) {
+	} else if (dynamic_cast<B*>(ptr)) {
 		std::cout << "B" << std::endl;
-	} else  if (C* tmp = dynamic_cast<C*>(ptr)){
+	} else  if (dynamic_cast<C*>(ptr)){
 		std::cout << "C" << std::endl;
 	} else {
 		std::cout << "Never reach" << std::endl;

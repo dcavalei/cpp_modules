@@ -1,7 +1,7 @@
 SRC		= $(shell find . -type f -name "*.cpp")
 OBJ		= $(SRC:.cpp=.o)
 CC		= clang++
-CFLAGS	= -Wall -Wextra -Werror -Wno-unused
+CFLAGS	= -Wall -Wextra -Werror -std=c++98
 NAME	= megaphone
 
 all:		$(NAME)
