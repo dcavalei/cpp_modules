@@ -29,7 +29,7 @@ unsigned int		Span::shortestSpan() {
 	if (_vector.size() < 2)
 		throw std::range_error("Span size < 2, can't calculate shortestSpan()");
 
-	for (it; it != (ite - 1); ++it) {
+	for (; it != (ite - 1); ++it) {
 		if (static_cast<unsigned int>(*(it + 1) - *it) < sSpan)
 			sSpan = *(it + 1) - *it;
 	}

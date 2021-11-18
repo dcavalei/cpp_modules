@@ -39,11 +39,11 @@ int main() {
 	std::cout << "longestSpan-> " << span.longestSpan() << std::endl;
 }
 {
-	Span				span(10000);
+	Span				span(100);
 	std::vector<int>	vector;
 
-	for (std::size_t i = 0; i < 10000; i++) {
-		vector.push_back(rand() % 1000000);
+	for (std::size_t i = 0; i < 100; i++) {
+		vector.push_back(rand() % 1000);
 	}
 
 	span.addNumber< std::vector<int> >(vector.begin(), vector.end());
